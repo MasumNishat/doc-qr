@@ -27,25 +27,25 @@
 
     <!-- Main Content -->
     <main class="max-w-6xl mx-auto px-4 py-8">
-        <h2 class="text-2xl font-semibold mb-6">Verify a report</h2>
+        <h2 class="text-xl font-semibold mb-6">Verify a report</h2>
 
         <div class="border border-gray-300 rounded mb-6 overflow-hidden">
             <table class="w-full">
                 <tbody>
-                    <tr class="border-b border-gray-300">
+                    <tr class="border-b border-gray-300 text-2xl">
                         <td class="px-4 py-3 bg-gray-50 font-medium text-gray-700 w-48">Date:</td>
-                        <td class="px-4 py-3">{{ $document->created_at->format('Y-m-d') }}</td>
+                        <td class="px-4 py-3">{{ $document->date->format('Y-m-d') }}</td>
                     </tr>
-                    <tr class="border-b border-gray-300">
+                    <tr class="border-b border-gray-300 text-2xl">
                         <td class="px-4 py-3 bg-gray-50 font-medium text-gray-700">CRTS No:</td>
                         <td class="px-4 py-3">{{ $document->crts_no }}</td>
                     </tr>
-                    <tr class="border-b border-gray-300">
+                    <tr class="border-b border-gray-300 text-2xl">
                         <td class="px-4 py-3 bg-gray-50 font-medium text-gray-700">Test:</td>
                         <td class="px-4 py-3">{{ $document->original_filename }}</td>
                     </tr>
                     <tr>
-                        <td class="px-4 py-3 bg-gray-50 font-medium text-gray-700">File:</td>
+                        <td class="px-4 py-3 bg-gray-50 font-medium text-gray-700 text-2xl">File:</td>
                         <td class="px-4 py-3">
                             <a
                                 href="{{ route('verify.download', $document->verification_code) }}"

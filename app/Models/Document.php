@@ -14,12 +14,14 @@ class Document extends Model
         'crts_no',
         'file_type',
         'page_count',
+        'date',
     ];
 
     protected function casts(): array
     {
         return [
             'page_count' => 'integer',
+            'date' => 'datetime',
         ];
     }
 

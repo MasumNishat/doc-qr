@@ -25,6 +25,7 @@ class StoreDocumentRequest extends FormRequest
             'document' => ['required', 'file', 'mimes:pdf,jpeg,jpg,png,gif', 'max:10240'],
             'verification_code' => ['nullable', 'string', 'size:10', 'unique:documents,verification_code'],
             'crts_no' => ['required', 'string', 'max:100'],
+            'date' => ['required', 'date'],
         ];
     }
 
@@ -41,6 +42,8 @@ class StoreDocumentRequest extends FormRequest
             'document.max' => 'Document size must not exceed 10MB.',
             'verification_code.size' => 'Verification code must be exactly 10 characters.',
             'verification_code.unique' => 'This verification code is already in use.',
+            'date.required' => 'Date is required.',
+            'date.date' => 'Date should be valid date format.',
             'crts_no.required' => 'CRTS No. is required.',
             'crts_no.max' => 'CRTS No. must not exceed 100 characters.',
         ];

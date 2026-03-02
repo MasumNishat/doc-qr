@@ -53,6 +53,7 @@ class DocumentController extends Controller
                 'crts_no' => $request->input('crts_no'),
                 'file_type' => $fileType,
                 'page_count' => $pageCount,
+                'date' => $request->input('date'),
             ]);
 
             // Embed QR Code into the first page

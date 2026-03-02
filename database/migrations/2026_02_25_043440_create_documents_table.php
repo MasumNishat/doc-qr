@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->string('verification_code', 10)->unique();
+            $table->dateTime('date');
             $table->string('original_filename');
             $table->string('crts_no', 100);
             $table->enum('file_type', ['pdf', 'image']);
